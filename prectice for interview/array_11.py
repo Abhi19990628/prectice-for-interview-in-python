@@ -60,17 +60,3 @@ def reverse_list(arr):
 arr = [1, 2, 3, 4, 5, 6, 7]
 print(reverse_list(arr))
 
-def reversed_list_twopointer(array):
-    left=0
-    right=len(array)-1
-    while (left < right):
-        temp=array[left]
-        array[left]=array[right]
-        array[right] = temp
-        left+=1
-        right-=1
-        
-    return array
-
-array=[1,2,3,4,5,6,7]
-print(reversed_list_twopointer(array))
