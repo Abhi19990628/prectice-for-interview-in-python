@@ -147,3 +147,14 @@ def find_missing_number(array):
 array=[1,2,3,4,5,6,8]
 missing_number = find_missing_number(array)
 print(f"The missing number is:{missing_number}")
+
+
+def find_missing_number(array):
+    n=len(array)+1
+    total_sum = n*(n+1)//2
+    actual_sum = sum(array)
+    return total_sum-actual_sum
+
+array=[1,2,3,4,5,6,8]
+missing_number = find_missing_number(array)
+print(f"The missing number is:{missing_number}")
