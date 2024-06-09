@@ -31,3 +31,8 @@ ll.append(1)
 ll.append(2)
 ll.append(3)
 ll.print_list()
+
+
+#What is a linked list, and how does it differ from an array?
+
+#A linked list is a data structure where each element (node) contains a value and a reference (pointer) to the next node in the sequence. Unlike arrays, linked lists do not have contiguous memory allocation, which allows for efficient insertion and deletion of elements. However, accessing an element by index requires traversal from the head of the list, leading to O(n) time complexity for access.
