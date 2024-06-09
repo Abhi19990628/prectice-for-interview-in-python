@@ -155,3 +155,26 @@ l2 = Node(2)
 l2.next = Node(4)
 l2.next.next = Node(6)
 merged_head = merge_sorted_lists(l1, l2)
+
+
+# How would you remove duplicates from an unsorted linked list in Python?
+
+def remove_duplicates(head):
+    if not head:
+        return head
+    current = head
+    seen = set([current.data])
+    while current.next:
+        if current.next.data in seen:
+            current.next = current.next.next
+        else:
+            seen.add(current.next.data)
+            current = current.next
+    return head
+
+# Example usage
+head = Node(1)
+head.next = Node(2)
+head.next.next = Node(2)
+head.next.next.next = Node(3)
+remove_duplicates(head)
