@@ -57,3 +57,41 @@ reversed_head = reverse_linked_list(head)
 #What is a linked list, and how does it differ from an array?
 
 #A linked list is a data structure where each element (node) contains a value and a reference (pointer) to the next node in the sequence. Unlike arrays, linked lists do not have contiguous memory allocation, which allows for efficient insertion and deletion of elements. However, accessing an element by index requires traversal from the head of the list, leading to O(n) time complexity for access.
+
+# What are the different types of linked lists, and how do you implement a doubly linked list in Python?
+
+python
+class DoublyNode:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+        self.prev = None
+
+class DoublyLinkedList:
+    def __init__(self):
+        self.head = None
+
+    def append(self, data):
+        new_node = DoublyNode(data)
+        if not self.head:
+            self.head = new_node
+            return
+        last = self.head
+        while last.next:
+            last = last.next
+        last.next = new_node
+        new_node.prev = last
+
+    def print_list(self):
+        curr = self.head
+        while curr:
+            print(curr.data, end=" <-> ")
+            curr = curr.next
+        print("None")
+
+# Example usage
+dll = DoublyLinkedList()
+dll.append(1)
+dll.append(2)
+dll.append(3)
+dll.print_list()
