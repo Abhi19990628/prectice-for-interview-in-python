@@ -95,3 +95,39 @@ dll.append(1)
 dll.append(2)
 dll.append(3)
 dll.print_list()
+
+# How would you detect a cycle in a linked list?
+
+
+def has_cycle(head):
+    slow, fast = head, head
+    while fast and fast.next:
+        slow = slow.next
+        fast = fast.next.next
+        if slow == fast:
+            return True
+    return False
+
+# Example usage
+head = Node(1)
+head.next = Node(2)
+head.next.next = Node(3)
+head.next.next.next = head  # Creating a cycle for testing
+print(has_cycle(head))  # Should return True
+
+# How do you find the middle element of a linked list in Python?
+
+def find_middle(head):
+    slow, fast = head, head
+    while fast and fast.next:
+        slow = slow.next
+        fast = fast.next.next
+    return slow.data
+
+# Example usage
+head = Node(1)
+head.next = Node(2)
+head.next.next = Node(3)
+head.next.next.next = Node(4)
+head.next.next.next.next = Node(5)
+print(find_middle(head))  # Should return 3
