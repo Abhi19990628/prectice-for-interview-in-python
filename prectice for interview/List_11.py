@@ -131,3 +131,27 @@ head.next.next = Node(3)
 head.next.next.next = Node(4)
 head.next.next.next.next = Node(5)
 print(find_middle(head))  # Should return 3
+
+# How can you merge two sorted linked lists in Python?
+def merge_sorted_lists(l1, l2):
+    dummy = Node(0)
+    tail = dummy
+    while l1 and l2:
+        if l1.data < l2.data:
+            tail.next = l1
+            l1 = l1.next
+        else:
+            tail.next = l2
+            l2 = l2.next
+        tail = tail.next
+    tail.next = l1 if l1 else l2
+    return dummy.next
+
+# Example usage
+l1 = Node(1)
+l1.next = Node(3)
+l1.next.next = Node(5)
+l2 = Node(2)
+l2.next = Node(4)
+l2.next.next = Node(6)
+merged_head = merge_sorted_lists(l1, l2)
