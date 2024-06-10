@@ -80,7 +80,46 @@ def evaluate_postfix(expression):
                 stack.push(int(operand1 / operand2))  # integer division
     return stack.pop()
 
+
+#4. Implement a Stack with O(1) Time Complexity for get_min
+# Question: Implement a stack that supports push, pop, and get_min operations, all in O(1) time complexity.
+
+
 # Example usage:
-print(evaluate_postfix("231*+9-"))  # Output: -4
+# print(evaluate_postfix("231*+9-"))  # Output: -4
+
+class MinStack:
+    def __init__(self):
+        self.stack = []
+        self.min_stack = []
+
+    def push(self, item):
+        self.stack.append(item)
+        if not self.min_stack or item <= self.min_stack[-1]:
+            self.min_stack.append(item)
+
+    def pop(self):
+        if not self.stack:
+            raise IndexError("pop from empty stack")
+        item = self.stack.pop()
+        if item == self.min_stack[-1]:
+            self.min_stack.pop()
+        return item
+
+    def get_min(self):
+        if not self.min_stack:
+            raise IndexError("get_min from empty stack")
+        return self.min_stack[-1]
+
+# Example usage:
+min_stack = MinStack()
+min_stack.push(3)
+min_stack.push(5)
+print(min_stack.get_min())  # Output: 3
+min_stack.push(2)
+min_stack.push(1)
+print(min_stack.get_min())  # Output: 1
+min_stack.pop()
+print(min_stack.get_min())  # Output: 2
 
 
