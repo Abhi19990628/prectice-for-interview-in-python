@@ -59,3 +59,28 @@ print(is_balanced("(())"))  # Output: True
 print(is_balanced("())("))  # Output: False
 
 
+# 3. Evaluate a Postfix Expression
+# Question: Evaluate a given postfix expression.
+
+def evaluate_postfix(expression):
+    stack = Stack()
+    for char in expression:
+        if char.isdigit():
+            stack.push(int(char))
+        else:
+            operand2 = stack.pop()
+            operand1 = stack.pop()
+            if char == '+':
+                stack.push(operand1 + operand2)
+            elif char == '-':
+                stack.push(operand1 - operand2)
+            elif char == '*':
+                stack.push(operand1 * operand2)
+            elif char == '/':
+                stack.push(int(operand1 / operand2))  # integer division
+    return stack.pop()
+
+# Example usage:
+print(evaluate_postfix("231*+9-"))  # Output: -4
+
+
