@@ -177,4 +177,25 @@ print(max_subarray(nums))  # Output: 6
 
 
 
+# Longest Increasing Subsequence (LIS)
+# Problem: Given an unsorted array of integers, find the length of the longest increasing subsequence.
+def length_of_lis(nums):
+    if not nums:
+        return 0
+
+    lis = [1] * len(nums)
+
+    for i in range(1, len(nums)):
+        for j in range(i):
+            if nums[i] > nums[j]:
+                lis[i] = max(lis[i], lis[j] + 1)
+
+    return max(lis)
+
+# Example
+nums = [10, 9, 2, 5, 3, 7, 101, 18]
+print(length_of_lis(nums))  # Output: 4
+
+
+
 
