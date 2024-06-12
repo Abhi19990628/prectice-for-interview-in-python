@@ -197,5 +197,27 @@ nums = [10, 9, 2, 5, 3, 7, 101, 18]
 print(length_of_lis(nums))  # Output: 4
 
 
+# Array Product Excluding Self
+# Problem: Given an array nums of n integers where n > 1, return an array output such that output[i] is equal to the product of all the elements of nums except nums[i].
+def product_except_self(nums):
+    length = len(nums)
+    answer = [1] * length
+
+    left = 1
+    for i in range(length):
+        answer[i] = left
+        left *= nums[i]
+
+    right = 1
+    for i in range(length - 1, -1, -1):
+        answer[i] *= right
+        right *= nums[i]
+
+    return answer
+
+# Example
+nums = [1, 2, 3, 4]
+print(product_except_self(nums))  # Output: [24, 12, 8, 6]
+
 
 
