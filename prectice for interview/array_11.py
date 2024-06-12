@@ -158,3 +158,23 @@ def find_missing_number(array):
 array=[1,2,3,4,5,6,8]
 missing_number = find_missing_number(array)
 print(f"The missing number is:{missing_number}")
+
+# Maximum Subarray Problem (Kadane's Algorithm)
+# Problem: Given an array of integers, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.
+def max_subarray(nums):
+    max_current = max_global = nums[0]
+    
+    for num in nums[1:]:
+        max_current = max(num, max_current + num)
+        if max_current > max_global:
+            max_global = max_current
+            
+    return max_global
+
+# Example
+nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
+print(max_subarray(nums))  # Output: 6
+
+
+
+
