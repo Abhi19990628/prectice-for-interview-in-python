@@ -138,4 +138,17 @@ def reverse_string(s):
 # Example usage:
 print(reverse_string("hello"))  # Output: "olleh"
 
+# 5. Reverse a String Using a Stack
+# Question: Write a function to reverse a string using a stack.
 
+def reverse_string(s):
+    stack = Stack()
+    for char in s:
+        stack.push(char)
+    reversed_str = ''
+    while not stack.is_empty():
+        reversed_str += stack.pop()
+    return reversed_str
+
+# Example usage:
+print(reverse_string("hello"))  # Output: "olleh"
