@@ -40,15 +40,32 @@ print(my_list)
 
 
 # Tuples:
+
 # Ordered: The elements in a tuple have a defined order, and this order will not change.
 # Immutable: Once a tuple is created, its elements cannot be changed, added, or removed.
 # Heterogeneous: Tuples can contain elements of different data types.
 # Indexable: Elements in a tuple can be accessed by their index, starting from 0
+
+
 tuple1 = (1, 2, 3)
 tuple2 = ("apple", "banana", "cherry")
 tuple3 = (1, "apple", 3.5)
 
-
 print(tuple1[0])  # Output: 1
 print(tuple2[1])  # Output: banana
 print(tuple3[2])  # Output: 3.5
+
+# Dictionaries:
+# Unordered: The elements (key-value pairs) in a dictionary are not stored in any particular order. Starting from Python 3.7, dictionaries maintain insertion order as an implementation detail, but it is not a feature to rely on for program correctness.
+# Mutable: You can change, add, or remove key-value pairs after the dictionary has been created.
+# Indexed by keys: Values are accessed using their keys, not by an index position.
+# Unique keys: Each key in a dictionary must be unique. If you try to use a duplicate key, the previous value associated with that key will be overwritten.
+
+
+dict1 = {
+    "name": "Alice",
+    "age": 25,
+    "city": "New York"
+}
+print(dict1["name"])  # Output: Alice
+print(dict1["age"])   # Output: 25
