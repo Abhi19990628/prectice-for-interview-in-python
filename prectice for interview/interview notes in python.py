@@ -69,3 +69,20 @@ dict1 = {
 }
 print(dict1["name"])  # Output: Alice
 print(dict1["age"])   # Output: 25
+
+
+
+# Set.
+
+
+
+# Unordered: The elements in a set do not have a specific order.
+# Unique elements: Each element in a set must be unique. If duplicates are added, they are automatically removed.
+# Mutable: Sets can be changed after their creation; you can add or remove elements.
+# Non-indexable: Elements in a set cannot be accessed by index, because sets do not maintain order.'
+
+set1 = {1, 2, 3, 4}
+set2 = {"apple", "banana", "cherry"}
+empty_set = set()
+set1.add(5)
+print(set1)  # Output: {1, 2, 3, 4, 5}
