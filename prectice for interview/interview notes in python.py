@@ -236,3 +236,47 @@ import math
 print(math.sqrt(16))     # Output: 4.0 (square root)
 print(math.pi)           # Output: 3.141592653589793 (constant)
 print(math.sin(math.pi)) # Output: 1.2246467991473532e-16 (sine of pi)
+
+
+
+
+
+
+# Virtual Environments in Python
+
+
+
+
+# A virtual environment in Python is a self-contained directory that contains a specific Python interpreter and any number of additional packages. Virtual environments allow you to isolate project dependencies and manage them separately from the system-wide Python interpreter and other projects.
+
+# Definition
+# Virtual environments are used to:
+
+# Isolate Dependencies: Each project can have its own set of dependencies (libraries and packages), which may differ in version requirements from other projects.
+
+# Avoid Dependency Conflicts: Different projects may require different versions of the same package. Virtual environments ensure that each project gets the version it needs without conflicts.
+
+# Maintain Clean Development Environment: Virtual environments keep your system-wide Python environment clean and prevent accidental modifications or installations.
+
+# Uses
+# Development: Create a virtual environment for each project to manage dependencies and ensure reproducibility across different environments.
+
+# Testing: Test your project in different Python environments or with different package versions without affecting other projects.
+
+# Deployment: Deploy your project with its specific dependencies, ensuring compatibility and consistency across different deployment environments
+
+
+# Creating a Virtual Environment:
+pip install virtualenv
+virtualenv name of your env for example (my_env)
+
+# Activating the Virtual Environment:
+
+# Navigate to the directory where your virtual environment is located. Then, depending on your Command Prompt shell (CMD or PowerShell):
+cd my_env
+myenv/scripts/./activate
+
+# Deactivating the Virtual Environment:
+# To deactivate the virtual environment and return to the system's global Python environment:
+
+deactivate
