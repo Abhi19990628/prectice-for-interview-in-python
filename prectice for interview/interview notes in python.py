@@ -32,3 +32,10 @@ def add(a, b=5):  # Default parameter
 print(add(10, 20))
 print(add(10))  # Uses default value for b
 
+
+# Data Structures
+my_list = [1, 2, 3]
+my_list.append(4)
+print(my_list)
+
+
