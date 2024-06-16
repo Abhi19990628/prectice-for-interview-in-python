@@ -86,3 +86,38 @@ set2 = {"apple", "banana", "cherry"}
 empty_set = set()
 set1.add(5)
 print(set1)  # Output: {1, 2, 3, 4, 5}
+
+
+
+# 6. File I/O
+# Reading and Writing Files:
+
+
+# File I/O (Input/Output) in Python involves reading from and writing to files. This is a fundamental operation that allows programs to persist data, read data from external sources, and interact with users through files.
+
+# Reading Files
+# Reading files means accessing the contents of a file and loading them into the program for processing.
+
+# Open a file for reading
+with open('example.txt', 'r') as file:
+    # Read the entire content of the file
+    content = file.read()
+    print(content)
+
+# Open a file for reading line by line
+with open('example.txt', 'r') as file:
+    for line in file:
+        print(line.strip())  # strip() removes trailing newline characters
+Writing files means creating or modifying a file by outputting data to it.
+
+Example:
+python
+Copy code
+# Open a file for writing (this will create a new file or overwrite an existing file)
+with open('example.txt', 'w') as file:
+    file.write('Hello, world!\n')
+    file.write('This is a second line.\n')
+
+# Open a file for appending (this will add to the end of the file without deleting existing content)
+with open('example.txt', 'a') as file:
+    file.write('This is an appended line.\n')
