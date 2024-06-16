@@ -121,3 +121,58 @@ with open('example.txt', 'w') as file:
 # Open a file for appending (this will add to the end of the file without deleting existing content)
 with open('example.txt', 'a') as file:
     file.write('This is an appended line.\n')
+
+
+
+File I/O (Input/Output) in Python involves reading from and writing to files. This is a fundamental operation that allows programs to persist data, read data from external sources, and interact with users through files.
+
+Reading Files
+Reading files means accessing the contents of a file and loading them into the program for processing.
+
+When opening a file, you specify the mode:
+
+'r' - Read (default mode). Opens the file for reading.
+'w' - Write. Opens the file for writing (creates a new file or truncates an existing file).
+'a' - Append. Opens the file for appending at the end of the file.
+'r+' - Read and Write. Opens the file for both reading and writing.
+'b' - Binary mode. Used with any of the above modes to open the file in binary mode (e.g., 'rb', 'wb').
+
+
+
+
+# Exception Handling in Python
+# Exception handling in Python is the process of responding to the occurrence of exceptions—unexpected events or errors that can happen during the execution of a program. Exception handling helps to ensure that a program can handle errors gracefully and continue running or terminate properly.
+
+# Basic Syntax of Exception Handling
+# The basic syntax for handling exceptions in Python involves using the try, except, else, and finally blocks
+
+def read_file(filename):
+    """Reads the content of a file and returns it."""
+    try:
+        with open(filename, 'r') as file:
+            content = file.read()
+        return content
+    except FileNotFoundError:
+        print(f"Error: The file '{filename}' does not exist.")
+        return None
+    except IOError:
+        print(f"Error: An error occurred while reading the file '{filename}'.")
+        return None
+
+def write_file(filename, content):
+    """Writes the given content to a file."""
+    try:
+        with open(filename, 'w') as file:
+            file.write(content)
+    except IOError:
+        print(f"Error: An error occurred while writing to the file '{filename}'.")
+
+# Example usage
+file_content = read_file('example.txt')
+if file_content is not None:
+    print("File content:")
+    print(file_content)
+
+new_content = "This is some new content for the file."
+write_file('example.txt', new_content)
+
