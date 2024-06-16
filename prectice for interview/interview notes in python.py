@@ -280,3 +280,35 @@ myenv/scripts/./activate
 # To deactivate the virtual environment and return to the system's global Python environment:
 
 deactivate
+
+
+
+
+# 12. Advanced Topics
+
+
+
+# Decorators in Python
+# Decorators are a powerful and advanced feature in Python that allow you to modify the behavior of functions or methods without changing their actual code. They provide a convenient syntax to wrap functions or methods with other functions, enabling you to add functionality, modify arguments, or perform actions before or after the original function call.
+
+# Definition
+# In Python, a decorator is a design pattern that allows you to dynamically alter the functionality of a function, method, or class without permanently modifying its code. Decorators are defined using the @decorator_name syntax before the function definition.
+
+# Example
+# Let's explore a simple example to illustrate how decorators work:
+
+# Decorator function definition
+def my_decorator(func):
+    def wrapper():
+        print("Something is happening before the function is called.")
+        func()
+        print("Something is happening after the function is called.")
+    return wrapper
+
+# Function definition with decorator
+@my_decorator
+def say_hello():
+    print("Hello!")
+
+# Calling the decorated function
+say_hello()
