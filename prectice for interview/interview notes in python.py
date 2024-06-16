@@ -218,3 +218,21 @@ print(my_dog.species)  # Output: Canis familiaris
 print(my_dog.description())  # Output: Buddy is 5 years old
 print(my_dog.speak("Woof!")) # Output: Buddy says Woof!
 
+
+
+# Libraries and Frameworks
+# Libraries and Frameworks in Software Development
+# Libraries and frameworks are essential components in software development that provide pre-written functionality to facilitate common tasks. They help developers save time, enhance productivity, and ensure code reliability by leveraging reusable code and established patterns.
+
+# Libraries
+# A library in programming refers to a collection of precompiled routines or functions that can be used in your code to perform specific tasks without rewriting them from scratch. Libraries typically focus on specific tasks or domains and are designed to be reusable across different projects.
+
+# Example: math Library in Python
+# The math library in Python provides various mathematical functions, constants, and utilities for numerical computations.
+
+import math
+
+# Using functions from the math library
+print(math.sqrt(16))     # Output: 4.0 (square root)
+print(math.pi)           # Output: 3.141592653589793 (constant)
+print(math.sin(math.pi)) # Output: 1.2246467991473532e-16 (sine of pi)
