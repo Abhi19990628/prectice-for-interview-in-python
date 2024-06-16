@@ -39,3 +39,16 @@ my_list.append(4)
 print(my_list)
 
 
+# Tuples:
+# Ordered: The elements in a tuple have a defined order, and this order will not change.
+# Immutable: Once a tuple is created, its elements cannot be changed, added, or removed.
+# Heterogeneous: Tuples can contain elements of different data types.
+# Indexable: Elements in a tuple can be accessed by their index, starting from 0
+tuple1 = (1, 2, 3)
+tuple2 = ("apple", "banana", "cherry")
+tuple3 = (1, "apple", 3.5)
+
+
+print(tuple1[0])  # Output: 1
+print(tuple2[1])  # Output: banana
+print(tuple3[2])  # Output: 3.5
