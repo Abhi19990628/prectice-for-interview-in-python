@@ -176,3 +176,45 @@ if file_content is not None:
 new_content = "This is some new content for the file."
 write_file('example.txt', new_content)
 
+
+# Classes and Objects in Python
+# Classes and objects are fundamental concepts of object-oriented programming (OOP) in Python. They help in creating and organizing code in a way that models real-world entities and relationships.
+
+# Definitions
+# Class: A blueprint for creating objects. It defines a set of attributes (data) and methods (functions) that the objects created from the class will have.
+# Object: An instance of a class. It is a specific realization of the class with actual values and functionalities.
+# Creating a Class
+# To define a class in Python, use the class keyword followed by the class name and a colon. Class names are usually written in CamelCase.
+
+class Dog:
+    # Class attribute
+    species = "Canis familiaris"
+
+    # Initializer / Instance attributes
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    # Instance method
+    def description(self):
+        return f"{self.name} is {self.age} years old"
+
+    # Another instance method
+    def speak(self, sound):
+        return f"{self.name} says {sound}"
+
+
+# Creating an instance of the Dog class
+my_dog = Dog("Buddy", 5)
+
+# Accessing instance attributes
+print(my_dog.name)  # Output: Buddy
+print(my_dog.age)   # Output: 5
+
+# Accessing class attribute
+print(my_dog.species)  # Output: Canis familiaris
+
+# Calling instance methods
+print(my_dog.description())  # Output: Buddy is 5 years old
+print(my_dog.speak("Woof!")) # Output: Buddy says Woof!
+
