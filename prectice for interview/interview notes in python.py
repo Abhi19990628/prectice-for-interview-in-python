@@ -24,3 +24,11 @@ def greet(name):
     return f"Hello, {name}!"
 
 print(greet("Alice"))
+
+# Arguments and Return Values:
+def add(a, b=5):  # Default parameter
+    return a + b
+
+print(add(10, 20))
+print(add(10))  # Uses default value for b
+
