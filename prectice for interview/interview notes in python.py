@@ -19,3 +19,8 @@ elif x == 5:
 else:
     print("x is less than 5")
 
+# Functions
+def greet(name):
+    return f"Hello, {name}!"
+
+print(greet("Alice"))
